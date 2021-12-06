@@ -4,7 +4,7 @@ phases:
   install:
     commands:      
       - echo Installing source NPM
-      - cd packages/auth && npm install
+      - npm install
   pre_build:
     commands:
       - echo Installing dependencies...     
