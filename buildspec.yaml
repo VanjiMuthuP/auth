@@ -12,6 +12,10 @@ phases:
     commands:
       - echo Build started...
       - npm run build
-  post_build:
-    commands:
-      - aws s3 sync dist s3://auth-dev-test-filmio --delete
+      
+  artifacts:
+    files:
+      - "**/*"
+    discard-paths: no
+    base-directory: dist
+ 
